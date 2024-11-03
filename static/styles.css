@@ -171,24 +171,47 @@ body {
 
 .portfolio-image {
     position: relative;
-    padding-top: 75%; /* 4:3 Aspect Ratio */
+    width: 100%; /* Full width of the container */
     overflow: hidden;
 }
 
-.placeholder-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform var(--transition-speed);
+.portfolio-image img {
+    width: 100%; /* Fit image to the width of the container */
+    height: auto; /* Maintain original aspect ratio */
+    object-fit: contain; /* Ensure full image fits within the container */
+    display: block;
 }
 
+/* Remove placeholder styling since actual images are used */
 .portfolio-item:hover .placeholder-img {
     transform: scale(var(--hover-scale));
 }
 
-/* Gradient backgrounds for placeholders */
+/* Portfolio Content Styling */
+.portfolio-content {
+    padding: 1.5rem;
+}
+
+.portfolio-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--bs-light);
+    transition: color var(--transition-speed);
+}
+
+.portfolio-item:hover .portfolio-content h3 {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio-content p {
+    font-size: 0.9rem;
+    color: var(--bs-secondary);
+    margin-bottom: 0;
+}
+
+/* Optional Gradient Background for Placeholder - Can be Removed if Not Needed */
 .gradient-1 .placeholder-img {
     background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
 }
@@ -211,29 +234,6 @@ body {
 
 .gradient-6 .placeholder-img {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.portfolio-content {
-    padding: 1.5rem;
-}
-
-.portfolio-content h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--bs-light);
-    transition: color var(--transition-speed);
-}
-
-.portfolio-item:hover .portfolio-content h3 {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.portfolio-content p {
-    font-size: 0.9rem;
-    color: var(--bs-secondary);
-    margin-bottom: 0;
 }
 
 /* Timeline Section */

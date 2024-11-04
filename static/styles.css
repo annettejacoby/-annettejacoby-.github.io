@@ -445,3 +445,19 @@ body {
         font-size: 2.5rem;
     }
 }
+
+/* Modal image adjustments */
+#modalImage {
+    max-width: 90vw;       /* Take up 90% of the viewport width */
+    max-height: 90vh;      /* Take up 90% of the viewport height */
+    width: auto;           /* Maintain original aspect ratio */
+    height: auto;
+    object-fit: contain;   /* Ensures the image scales down without cropping */
+}
+
+/* Modal dialog adjustments for larger landscape images */
+.modal-dialog.modal-lg {
+    max-width: 95vw; /* Allow the modal to take more width for landscape images */
+    width: auto;
+}
+

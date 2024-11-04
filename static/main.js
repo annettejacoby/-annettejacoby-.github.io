@@ -1,3 +1,8 @@
+// Function to display images in modal
+function openModalImage(src) {
+    document.getElementById('modalImage').src = src;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS with enhanced options
     AOS.init({

@@ -6,7 +6,6 @@ function openModalImage(src) {
     const img = new Image();
     img.src = src;
     img.onload = function() {
-        // Check if the image is landscape (width > height)
         if (img.width > img.height) {
             document.querySelector('.modal-dialog').classList.add('modal-lg');
         } else {
@@ -16,7 +15,6 @@ function openModalImage(src) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS with enhanced options
     AOS.init({
         duration: 1000,
         once: true,
@@ -25,10 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
         disable: 'mobile'
     });
 
-    // Navbar scroll effect with smoother transition
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
-    
+
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
@@ -43,11 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('scrolled');
             navbar.style.transform = 'translateY(0)';
         }
-        
         lastScrollTop = scrollTop;
     });
 
-    // Enhanced smooth scroll for navigation links
+    // Smooth scroll for navigation links (do not apply to mailto: or external links)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -65,7 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add hover effect for portfolio items
+    // Check clicks on Email and LinkedIn links
+    document.querySelector('.btn-primary').addEventListener('click', () => {
+        console.log("Email button clicked");
+    });
+
+    const linkedinLink = document.querySelector('.fab.fa-linkedin');
+    linkedinLink.parentNode.addEventListener('click', () => {
+        console.log("LinkedIn link clicked");
+    });
+
     document.querySelectorAll('.portfolio-item').forEach(item => {
         item.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px)';
@@ -75,9 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhance social links with stagger effect
     const socialLinks = document.querySelectorAll('.social-links a');
     socialLinks.forEach((link, index) => {
         link.style.transitionDelay = `${index * 0.1}s`;
     });
 });
+

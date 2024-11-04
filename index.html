@@ -68,7 +68,8 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <div class="portfolio-item">
                         <div class="portfolio-image gradient-1">
-                            <img src="static/img/treecensus.png" alt="NYC Tree Census" class="img-fluid">
+                             <img src="static/img/treecensus.png" alt="NYC Tree Census" class="img-fluid"
+                                  data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModalImage('static/img/treecensus.png')">
                         </div>
                         <div class="portfolio-content">
                             <h3>The NYC Tree Census</h3>
@@ -81,6 +82,7 @@
                     <div class="portfolio-item">
                         <div class="portfolio-image gradient-2">
                             <img src="static/img/lifeexpect.png" alt="Life Expectancy at Birth" class="img-fluid">
+                                 data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModalImage('static/img/lifeexpect.png')">
                         </div>
                         <div class="portfolio-content">
                             <h3>Life Expectancy at Birth</h3>
@@ -92,7 +94,8 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="portfolio-item">
                           <div class="portfolio-image gradient-3">
-                            <img src="static/img/waterstress.png" alt="Level of Water Stressh" class="img-fluid">
+                            <img src="static/img/waterstress.png" alt="Level of Water Stress" class="img-fluid">
+                                 data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModalImage('static/img/waterstress.png')">
                         </div>
                         <div class="portfolio-content">
                             <h3>Water Stress: Resource Availability vs. Consumption</h3>
@@ -105,6 +108,7 @@
                     <div class="portfolio-item">
                         <div class="portfolio-image gradient-4">
                              <img src="static/img/timeuse.png" alt="timeuse" class="img-fluid">
+                                  data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModalImage('static/img/timeuse.png')">
                         </div>
                         <div class="portfolio-content">
                             <h3>A Day in the Life: Gender Differences in American Daily Routines</h3>
@@ -117,6 +121,7 @@
                     <div class="portfolio-item">
                         <div class="portfolio-image gradient-5">
                             <img src="static/img/undocumented.png" alt="undoc" class="img-fluid">
+                                 data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModalImage('static/img/undocumented.png')">
                         </div>
                         <div class="portfolio-content">
                             <h3>Undocumented Migration: Movement, Population Share, and Trends Over Time</h3>
@@ -129,6 +134,7 @@
                     <div class="portfolio-item">
                         <div class="portfolio-image gradient-6">
                             <img src="static/img/votingrights.png" alt="voterrights" class="img-fluid">
+                                 data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModalImage('static/img/votingrights.png')">
                         </div>
                         <div class="portfolio-content">
                             <h3>Voter Rights, Then and Now</h3>
@@ -207,5 +213,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="static/main.js"></script>
+
+    <!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Enlarged image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-/ Function to display images in modal
+// Function to display images in modal
 function openModalImage(src) {
     const modalImage = document.getElementById('modalImage');
     modalImage.src = src;
@@ -82,6 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const socialLinks = document.querySelectorAll('.social-links a');
     socialLinks.forEach((link, index) => {
-        link.style.transitionDelay = ${index * 0.1}s;
+        link.style.transitionDelay = `${index * 0.1}s`;
     });
 });

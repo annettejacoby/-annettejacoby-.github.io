@@ -1,10 +1,11 @@
-// Function to display images in modal
 function openModalImage(src) {
     const modalImage = document.getElementById('modalImage');
     modalImage.src = src;
+
     const img = new Image();
     img.src = src;
     img.onload = function() {
+        // Check if the image is landscape (width > height)
         if (img.width > img.height) {
             document.querySelector('.modal-dialog').classList.add('modal-lg');
         } else {

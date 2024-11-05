@@ -61,16 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Check clicks on Email and LinkedIn links
-    document.querySelector('.btn-primary').addEventListener('click', () => {
-        console.log("Email button clicked");
-    });
-
-    const linkedinLink = document.querySelector('.fab.fa-linkedin');
-    linkedinLink.parentNode.addEventListener('click', () => {
-        console.log("LinkedIn link clicked");
-    });
-
+    // Hover effect for portfolio items
     document.querySelectorAll('.portfolio-item').forEach(item => {
         item.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px)';
@@ -80,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Stagger effect for social links
     const socialLinks = document.querySelectorAll('.social-links a');
     socialLinks.forEach((link, index) => {
         link.style.transitionDelay = `${index * 0.1}s`;
     });
 });
-

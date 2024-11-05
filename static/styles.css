@@ -459,3 +459,44 @@ body {
     max-width: 95vw; /* Allow the modal to take more width for landscape images */
     width: auto;
 }
+
+/* Ensure links and buttons in the contact section are clickable */
+.contact-info a {
+    pointer-events: auto; /* Ensure links are clickable */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Maintain color from existing styles */
+}
+
+.contact-info .btn-primary {
+    pointer-events: auto; /* Ensure button is clickable */
+    cursor: pointer;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.contact-info .btn-primary:hover {
+    background-color: #0056b3; /* Darken on hover */
+}
+
+/* Adjust hover effects on social icons */
+.social-links a {
+    pointer-events: auto;
+    font-size: 1.8rem;
+    color: var(--bs-secondary);
+    margin: 0 1rem;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-links a i {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

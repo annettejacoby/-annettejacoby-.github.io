@@ -454,7 +454,7 @@ body {
 #modalImage {
     max-width: 90vw;       /* Take up 90% of the viewport width */
     max-height: 90vh;      /* Take up 90% of the viewport height */
-    width: 100%;          
+    width: auto;          
     height: auto;
 }
 

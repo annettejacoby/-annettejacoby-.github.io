@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         disable: 'mobile'
     });
 
-    // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
 
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
 
-    // Smooth scroll for internal navigation links
+    // Smooth scroll for navigation links (do not apply to mailto: or external links)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -60,5 +59,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+
+    // Check clicks on Email and LinkedIn links
+    document.querySelector('.btn-primary').addEventListener('click', () => {
+        console.log("Email button clicked");
+    });
+
+    const linkedinLink = document.querySelector('.fab.fa-linkedin');
+    linkedinLink.parentNode.addEventListener('click', () => {
+        console.log("LinkedIn link clicked");
+    });
+
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    const socialLinks = document.querySelectorAll('.social-links a');
+    socialLinks.forEach((link, index) => {
+        link.style.transitionDelay = `${index * 0.1}s`;
     });
 });

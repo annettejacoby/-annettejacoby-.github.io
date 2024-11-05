@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         disable: 'mobile'
     });
 
+    // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
 
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
 
-    // Smooth scroll for navigation links (do not apply to mailto: or external links)
+    // Smooth scroll for internal navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -59,21 +60,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    });
-
-    // Hover effect for portfolio items
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-        });
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Stagger effect for social links
-    const socialLinks = document.querySelectorAll('.social-links a');
-    socialLinks.forEach((link, index) => {
-        link.style.transitionDelay = `${index * 0.1}s`;
     });
 });
